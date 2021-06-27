@@ -1,5 +1,7 @@
 evan\learningprogramming\NumberGenerator.class
+evan\learningprogramming\AppConfig.class
 evan\learningprogramming\NumberGeneratorImpl.class
 evan\learningprogramming\Game.class
-evan\learningprogramming\Main.class
+evan\learningprogramming\MessageGenerator.class
 evan\learningprogramming\GameImpl.class
+evan\learningprogramming\MessageGeneratorImpl.class
