@@ -1,6 +1,6 @@
 package evan.learningprogramming.console;
 
-import evan.learningprogramming.AppConfig;
+import evan.learningprogramming.config.AppConfig;
 import evan.learningprogramming.MessageGenerator;
 import evan.learningprogramming.NumberGenerator;
 import org.slf4j.Logger;

@@ -17,7 +17,9 @@ public class GameImpl implements Game {
     @Autowired //<this annotation wires the number generator dependency. using this instead of setter based DI
     private NumberGenerator numberGenerator;
 
-    private int guessCount = 10;
+    @Autowired
+    private int guessCount;
+
     private int number;
     private int guess;
     private int smallest;
@@ -86,6 +88,11 @@ public class GameImpl implements Game {
         return remainingGuesses;
     }
 
+
+    @Override
+    public int getGuessCount() {
+        return guessCount;
+    }
 
     @Override
     public void check() {
