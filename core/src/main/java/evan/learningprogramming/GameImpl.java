@@ -3,23 +3,23 @@ package evan.learningprogramming;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-
+@Component
 public class GameImpl implements Game {
 
     // == contants ==
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
     // ==fields ==
-    @Autowired //<this annotation wires the number generator dependency. using this instead of setter based DI
-    private NumberGenerator numberGenerator;
+//@Autowired  //<this annotation wires the number generator dependency. using this instead of setter based DI
 
-    @Autowired
-    @GuessCount
-    private int guessCount;
+
+    private final NumberGenerator numberGenerator;
+    private final int guessCount;
 
     private int number;
     private int guess;
@@ -29,10 +29,13 @@ public class GameImpl implements Game {
     private boolean validNumberRange = true;
 
     // == contructors ==
-    //the below constructor can be used if doing a constructor based dependency injection in beans.xml. see example there.
-//    public GameImpl(NumberGenerator numberGenerator) {
-//            this.numberGenerator = numberGenerator;
-//    }
+//    the below constructor can be used if doing a constructor based dependency injection in beans.xml. see example there.
+    @Autowired
+    public GameImpl(NumberGenerator numberGenerator, @GuessCount int guessCount) {
+        this.numberGenerator = numberGenerator;
+        this.guessCount = guessCount;
+    }
+
 //  Else you can use a setter based DI which can see an example of below.
 
 

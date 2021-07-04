@@ -1,6 +1,6 @@
 package evan.learningprogramming.console;
 
-import evan.learningprogramming.config.AppConfig;
+import evan.learningprogramming.config.gameConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -19,7 +19,7 @@ public class Main {
         //commented out the above line since we aren't using the beans.xml classpath anymore. As we move to Anntations, the below line was added as the new class now
         //contains the config for the container.
 
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);//defines the context to IOC container
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(gameConfig.class);//defines the context to IOC container
 
         //get number generator beam from context (container)
         //below we are asking the container for the bean instance by name and type
