@@ -8,10 +8,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.METHOD})  // this line annotates the context in which an annotation type is applicable
-//So our annotion MaxNumber can be added to fields, parameters and/or methods.
+//So our annotion guessCount can be added to fields, parameters and/or methods.
 @Retention(RetentionPolicy.RUNTIME) //how long are the annotation are the be retained
 @Qualifier //Spring annotation used to annotate other custom annotations
-public @interface MaxNumber {
-
-
+public @interface GuessCount {
 }
