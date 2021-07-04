@@ -17,11 +17,6 @@ public class AppConfig {
     //here the @import annotation allows for importing bean definitions from another class.
 
     @Bean
-    public NumberGenerator numberGenerator() {
-        return new NumberGeneratorImpl();
-    }
-
-    @Bean
     public Game game() {
         return new GameImpl();
     }

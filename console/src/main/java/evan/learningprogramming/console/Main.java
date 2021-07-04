@@ -1,8 +1,6 @@
 package evan.learningprogramming.console;
 
 import evan.learningprogramming.config.AppConfig;
-import evan.learningprogramming.MessageGenerator;
-import evan.learningprogramming.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -25,21 +23,21 @@ public class Main {
 
         //get number generator beam from context (container)
         //below we are asking the container for the bean instance by name and type
-        NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
+//        NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
 
         //call method next() to get a random number
-        int number = numberGenerator.next();
+//        int number = numberGenerator.next();
 
         //log generated number/ curly braces are place holder. will be replaced with number value after the comma.
-        log.info("number = {}", number);
+//        log.info("number = {}", number);
 
 
         //get game beam from context (container)
         //Game game = context.getBean(Game.class);  //no longer needed since we getting the line below.
 
-        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
-        log.info("getMainMessage= {}", messageGenerator.getMainMessage());
-        log.info("getResultMessage= {}", messageGenerator.getResultMessage());
+//        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
+//        log.info("getMainMessage= {}", messageGenerator.getMainMessage());
+//        log.info("getResultMessage= {}", messageGenerator.getResultMessage());
 
         //call reset method to reset the game
         //game.reset();
