@@ -1,32 +1,38 @@
 package evan.learningprogramming;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+@Slf4j
+@Getter
 
 @Component
 public class GameImpl implements Game {
 
     // == contants ==
-    private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
+//    private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
     // ==fields ==
 //@Autowired  //<this annotation wires the number generator dependency. using this instead of setter based DI
 
-
+    @Getter(AccessLevel.NONE)  //As we have added @getter lombok annotation on the class we can get rid of all other getters and set the access level here where we don't need a getter
     private final NumberGenerator numberGenerator;
     private final int guessCount;
 
     private int number;
-    private int guess;
     private int smallest;
     private int biggest;
     private int remainingGuesses;
     private boolean validNumberRange = true;
+
+    @Setter
+    private int guess;
 
     // == contructors ==
 //    the below constructor can be used if doing a constructor based dependency injection in beans.xml. see example there.
@@ -61,42 +67,42 @@ public class GameImpl implements Game {
 //    public void setNumberGenerator(NumberGenerator numberGenerator) {
 //        this.numberGenerator = numberGenerator;
 //    }
+// Getting rid of all getters since we added the class level @getter annotation
+//    @Override
+//    public int getNumber() {
+//        return number;
+//    }
+//
+//    @Override
+//    public int getGuess() {
+//        return guess;
+//    }
 
-    @Override
-    public int getNumber() {
-        return number;
-    }
+//    @Override
+//    public void setGuess(int guess) {
+//        this.guess = guess;
+//    }
 
-    @Override
-    public int getGuess() {
-        return guess;
-    }
-
-    @Override
-    public void setGuess(int guess) {
-        this.guess = guess;
-    }
-
-    @Override
-    public int getSmallest() {
-        return smallest;
-    }
-
-    @Override
-    public int getBiggest() {
-        return biggest;
-    }
-
-    @Override
-    public int getRemainingGuesses() {
-        return remainingGuesses;
-    }
-
-
-    @Override
-    public int getGuessCount() {
-        return guessCount;
-    }
+//    @Override
+//    public int getSmallest() {
+//        return smallest;
+//    }
+//
+//    @Override
+//    public int getBiggest() {
+//        return biggest;
+//    }
+//
+//    @Override
+//    public int getRemainingGuesses() {
+//        return remainingGuesses;
+//    }
+//
+//
+//    @Override
+//    public int getGuessCount() {
+//        return guessCount;
+//    }
 
     @Override
     public void check() {
@@ -114,10 +120,10 @@ public class GameImpl implements Game {
 
     }
 
-    @Override
-    public boolean isValidNumberRange() {
-        return validNumberRange;
-    }
+//    @Override
+//    public boolean isValidNumberRange() {
+//        return validNumberRange;
+//    }
 
     @Override
     public boolean isGameWon() {

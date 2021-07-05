@@ -1,13 +1,13 @@
 package evan.learningprogramming.console;
 
 import evan.learningprogramming.config.gameConfig;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+@Slf4j
 public class Main {
-    private static final Logger log = LoggerFactory.getLogger(Main.class);
+//    private static final Logger log = LoggerFactory.getLogger(Main.class);  Commented this out after adding the SLF4J lombok annotation
     //commenting out the below line after deleting the beans.xml since its no longer needed.
     //private static final String CONFIG_LOCATION = "beans.xml"; //location of config of the container
 
