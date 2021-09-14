@@ -1,0 +1,8 @@
+<configuration>
+
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <logger name="evan.learnprogramming" level="DEBUG"/>
+    <logger name="org.springframework" level="INFO"/><!--THIS IS DEBUG LEVEL LOGS. (WAY MORE INFO THAN THE REGULAR)-->
+
+</configuration>
