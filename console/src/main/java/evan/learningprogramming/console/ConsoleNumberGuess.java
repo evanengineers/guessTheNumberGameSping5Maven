@@ -1,7 +1,7 @@
 package evan.learningprogramming.console;
 
-import evan.learningprogramming.Game;
-import evan.learningprogramming.MessageGenerator;
+import evan.learnprogramming.Game;
+import evan.learnprogramming.MessageGenerator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
