@@ -25,7 +25,7 @@ public class MessageGeneratorImpl implements MessageGenerator {
     // == public methods ==
     @Override
     public String getMainMessage() {
-        return "number is between " +
+        return "The number is between " +
                 game.getSmallest() +
                 " and " +
                 game.getBiggest() +
