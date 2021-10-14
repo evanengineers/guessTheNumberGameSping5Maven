@@ -47,6 +47,7 @@ public class GameController {
 
     @GetMapping(GameMappings.HOME)
     public String home() {
+        gameService.reset();
         return ViewNames.HOME;
     }
 
