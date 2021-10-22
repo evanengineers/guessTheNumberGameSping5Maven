@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thyeleaf.org">
-<head>
+<html lang="en">
+<head id="headID">
     <meta charset="UTF-8">
     <title>Guess the Number Game</title>
 </head>
@@ -10,16 +10,15 @@
 
         <h2>Game Over!</h2>
 
-        <h3 th:text="${resultMessage}">Result Message Content</h3>
+        <h3 id="result-message">Result Message Content</h3>
 
-        <h3><a th:href="restart">Play Again</a></h3>
+        <h3><a id="restart">Play Again</a></h3>
 
-        <h3><a th:href="home">Home</a></h3>
+        <h3><a id="home">Home</a></h3>
 
-        <footer>
+        <footer id="footId">
             <p>Created by Cottrell Technology Enterprises</p>
         </footer>
-
     </div>
 </body>
 </html>

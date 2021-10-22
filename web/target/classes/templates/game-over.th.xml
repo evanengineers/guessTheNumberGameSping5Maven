@@ -1,0 +1,16 @@
+<thlogic>
+    <attr sel="#headID"
+          th:replace="~{fragments/head :: headFragment}"/>
+
+    <attr sel="#result-message"
+          th:text="${resultMessage}"/>
+
+    <attr sel="#restart"
+          th:href="restart"/>
+
+    <attr sel="#home"
+          th:href="home"/>
+
+    <attr sel="#footId"
+          th:replace="~{fragments/foot :: footFragment}"/>
+</thlogic>

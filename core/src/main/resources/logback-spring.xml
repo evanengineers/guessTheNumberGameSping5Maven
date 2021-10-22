@@ -4,5 +4,5 @@
 
     <logger name="evan.learnprogramming" level="DEBUG"/>
     <logger name="org.springframework" level="INFO"/><!--THIS IS DEBUG LEVEL LOGS. (WAY MORE INFO THAN THE REGULAR)-->
-
+    <logger name="org.thymeleaf" level="INFO"/>
 </configuration>

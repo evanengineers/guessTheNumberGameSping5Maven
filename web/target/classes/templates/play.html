@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thyeleaf.org">
-<head>
+<html lang="en">
+<head id="headId">
     <meta charset="UTF-8">
     <title>Guess The Number Game</title>
 </head>
 <body>
     <div align="center">
         <h1>Guess The Number Game</h1>
-        <h3 th:text="${mainMessage}">
+        <h3 id="main-message">
             Main Message Content
         </h3>
-        <h3 th:text="${resultMessage}">
+        <h3 id="result-message">
             Result Message Content
         </h3>
 
-        <form th:action="play" method="post">
+        <form id="game-form">
             <label for="guess">Enter your guess</label>
             <input id="guess" type="number" name="guess"/>
             <input type="submit" value="Submit"/>
         </form>
-        <footer>
+        <footer id="footerId">
             <p>Created by Cottrell Technology Enterprises</p>
         </footer>
     </div>
