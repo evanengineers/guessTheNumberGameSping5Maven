@@ -1,4 +1,6 @@
 <thlogic>
     <attr sel="#footId"
           th:fragment="footFragment"/>
+
+    <attr sel="#created-by" th:text="|#{game.createdBy} Cottrell Technology Enterprises|"/>
 </thlogic>

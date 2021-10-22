@@ -2,6 +2,8 @@
     <attr sel="#headId"
             th:replace="~{fragments/head :: headFragment}"/>
 
+    <attr sel="#game-title" th:text="#{game.title}"/>
+
     <attr sel="#main-message"
           th:text="${mainMessage}"/>
 
@@ -10,6 +12,8 @@
 
     <attr sel="#game-form"
           th:action="play" method="post"/>
+    <attr sel="#enter-guess" th:text="#{game.enter.guess}"/>
+    <attr sel="#submit" th:value="#{game.submit}"/>
 
     <attr sel="#footerId"
           th:replace="~{fragments/foot :: footFragment}"/>

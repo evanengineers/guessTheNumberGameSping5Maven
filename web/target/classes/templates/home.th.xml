@@ -1,0 +1,10 @@
+<thlogic>
+    <attr sel="#headId"
+          th:replace="~{fragments/head :: headFragment}"/>
+
+    <attr sel="#play-game"
+          th:href="play" th:text="Play"/>
+
+    <attr sel="#footId"
+          th:replace="~{fragments/foot :: footFragment}"/>
+</thlogic>
