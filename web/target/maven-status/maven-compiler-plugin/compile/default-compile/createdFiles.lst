@@ -1,4 +1,5 @@
 evan\learnprogramming\service\GameServiceImpl.class
+evan\learnprogramming\interceptor\RequestInterceptor.class
 evan\learnprogramming\controller\GameController.class
 evan\learnprogramming\WebMain.class
 evan\learnprogramming\service\GameService.class
